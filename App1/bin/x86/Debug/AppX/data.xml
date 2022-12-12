@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <feature>
+    <bluetooth>
+      <a></a>
+      <b></b>
+      <c></c>
+    </bluetooth>
+    <office>
+      <msteam></msteam>
+      <word></word>
+      <excel></excel>
+    </office>
+  </feature>
+  <swproduct>
+    <chrome></chrome>
+    <firefox></firefox>
+    <edge></edge>
+  </swproduct>
+</root>

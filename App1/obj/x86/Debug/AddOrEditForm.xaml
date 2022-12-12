@@ -1,0 +1,29 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="App1.AddOrEditForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" d:DesignHeight="366" d:DesignWidth="550.25">
+    <Grid Margin="50,0">
+        <StackPanel>
+            <TextBlock Text="ADD OR EDIT" HorizontalAlignment="Center"/>
+            <ComboBox x:ConnectionId='2' x:Name="cbParent" Header="Parent" Width="Auto" 
+                                         DisplayMemberPath="Feature"/>
+            <TextBox x:ConnectionId='3' Margin="0,0,0,20" Name="Feature" Header="Feature:" PlaceholderText="Feature" />
+            <TextBox x:ConnectionId='4' Margin="0,0,0,20" Name="AppName" Header="AppName:" PlaceholderText="AppName"/>
+            <TextBox x:ConnectionId='5' Margin="0,0,0,20" Name="AppLink" Header="AppLink:" PlaceholderText="AppLink" />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Button x:ConnectionId='6' HorizontalAlignment="Right" Grid.Column="1" x:Name="btnSave" Content="Add"                      />
+                <Button x:ConnectionId='7' HorizontalAlignment="Right" Grid.Column="0" x:Name="btnCancel" Content="Cancel"                        />
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Page>
+

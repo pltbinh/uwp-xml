@@ -1,0 +1,48 @@
+﻿<Page
+    x:Class="App1.MainPage"
+    xmlns:muxc="using:Windows.UI.Xaml.Controls"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="4*" />
+        </Grid.ColumnDefinitions>
+        <Rectangle Height="100" Width="100">
+            <Rectangle.ContextFlyout>
+                <MenuFlyout x:Name="Menu">
+                    <MenuFlyoutItem Text="Add" Icon="Add"  Click="AddItem_Click" />
+                    <MenuFlyoutItem Text="Edit" Icon="Edit" Click="EditItem_Click" />
+                    <MenuFlyoutItem Text="Delete" Icon="Delete" Click="DeleteItem_Click" />
+                </MenuFlyout>
+            </Rectangle.ContextFlyout>
+        </Rectangle>
+
+        <Grid Name="SideBar" Grid.Column="0">
+
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid Name="Master" Grid.Column="0">
+                    <ListView Name="MasterList" />
+                </Grid>
+            </Grid>
+            <Grid Name="DebugLog" Grid.Row="1">
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
